@@ -1,12 +1,15 @@
 package page;
 
-import appiumCore.DSL;
+import appiumCore.basePage;
 
-public class menuPage {
+public class menuPage extends basePage {
 
-    private DSL dsl =new DSL();
 
     public void acessarFormulario(){
-        dsl.clicarPorIndex(1);
+        clicarPorIndex(1);
+    }
+
+    public void acessarSplash(){
+        clicarPorTexto("Splash");
     }
 }

@@ -1,14 +1,13 @@
 package test;
 
-import appiumCore.driverFactory;
+import appiumCore.baseTest;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import page.formularioPage;
 import page.menuPage;
 
 
-public class formularioTeste {
+public class formularioTeste extends baseTest {
 
 
     private menuPage menu = new menuPage();
@@ -33,6 +32,7 @@ public class formularioTeste {
     public void selecionarCombos() {
         page.selecionarCombo("Nintendo Switch");
         Assert.assertEquals("Nintendo Switch", page.obterValorCombo());
+
     }
 
     @Test(priority = 3)
@@ -51,7 +51,14 @@ public class formularioTeste {
     @Test(priority = 4)
     public void salvarCadastro() {
 
-        page.btnSalvar();
+        //page.btnSalvar();
+
+    }
+
+    @Test(priority = 4)
+    public void salvarCadastroDemorado() {
+
+        page.btnSalvarDemorado();
     }
 
     @Test(priority = 5)
@@ -61,13 +68,10 @@ public class formularioTeste {
         Assert.assertEquals("Console: switch", page.validarConsoleCadastrado());
         Assert.assertEquals("Switch: Off", page.validarSwitchCadastrado());
         Assert.assertEquals("Checkbox: Marcado", page.validarCheckCadastrado());
+
     }
 
 
-    @AfterClass
-    public void fecharAppium() {
-        driverFactory.killDriver();
-    }
 }
 
 
