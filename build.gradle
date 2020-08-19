@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.udemy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
+    compile group: 'info.cukes', name: 'cucumber-testng', version: '1.2.5'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'io.appium', name: 'java-client', version: '7.2.0'
+}
