@@ -20,9 +20,10 @@ public class splashTeste extends baseTest {
         splash.telaSplashVisivel();
 
         //Aguardar saida do Splash
-        deveAguardarSplashSumir();
+        splash.aguardarSplashSumir();
 
         //Verificar que o formulario esta aparecendo
-        Assert.assertTrue(splash.validarElementoTexto("Formulário"));
+        Assert.assertFalse(splash.validarElementoTexto("Formulário"));
+
     }
 }

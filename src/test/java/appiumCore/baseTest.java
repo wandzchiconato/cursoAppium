@@ -31,7 +31,13 @@ public class baseTest extends driverFactory {
         FileUtils.copyFile(foto, new File("out/prints/" + caminhoPrint + "/" + testname + ".png"));
     }
 
-
+    public void esperar(long tempo){
+        try {
+            Thread.sleep(tempo);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
